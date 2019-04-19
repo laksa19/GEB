@@ -11,7 +11,7 @@ Cara mudah untuk blok iklan (GIF) yang membandel.
 [Video Tutorial](https://drive.google.com/file/d/1LGqHC0R_k5nFITYlhyl4ECLIcTFdSaPp/view?usp=sharing)
 
 ### Ajukan Website
-Ajukan domain website [di sini](https://github.com/laksa19/GEB/issues/1)
+Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa19/GEB/issues/1)
 
 ### Website GEB
 1. indoxxi.cx
