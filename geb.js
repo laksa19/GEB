@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GIF & Elements Blocker
-// @namespace    https://laksa19.github.io/hide-elements/
-// @updateURL    https://raw.githubusercontent.com/laksa19/hide-elements/master/hide-elements.js
-// @downloadURL  https://raw.githubusercontent.com/laksa19/hide-elements/master/hide-elements.js
+// @namespace    https://laksa19.github.io/GEB
+// @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
+// @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @version      0.0.1
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
