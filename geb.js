@@ -3,6 +3,7 @@
 // @namespace    https://laksa19.github.io/GEB
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
+// @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
 // @version      0.0.1
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
