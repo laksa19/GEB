@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.5
+// @version      0.0.6
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @author       Laksamadi Guko
@@ -76,32 +76,26 @@ var domArr = ["",
 
              ];
 
-// hide element
-if (domain == "indoxxi"){
+// hide Gif & elements
+if ((domArr.indexOf(domain)) > 0){
+// Gif images
+    HideGif()
+// elements
 // indoxxi
     HideId("home-bnner-content")
     HideId("home-bnner2-content")
     HideId("player-side-left")
     HideId("player-side-right")
     HideId("p_native")
-} else if(domain == "anoboy"){
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
     HideId("judi")
     HideId("rn_ad_native_t4745")
-} else if(domain == "lk21online"){
 // lk21online
     HideId("tengah")
-} else if(domain == "lk21"){
 // lk21
     HideClass("inner-floatbanner-bottom")
-
-}
-
-// hide Gif images
-if ((domArr.indexOf(domain)) > 0){
-    HideGif()
 }
 
 })();
