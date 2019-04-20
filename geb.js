@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.12
+// @version      0.0.14
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -29,9 +29,9 @@ function HideClass(classname){
         }
     }
 }
-// hide by classname with delay
-function HideClassWD(classname,t=5) {
-  setTimeout(function(){ HideClass(classname) }, (t*1000));
+// hide by classname with inteval
+function HideClassWi(classname) {
+  setInterval(function(){ HideClass(classname) }, 500);
 }
 // hide by id
 function HideId(id){
@@ -41,9 +41,9 @@ function HideId(id){
     console.log("[GEB] Block Element Id : "+(el));
     }
 }
-// hide by id with delay
-function HideIdWD(id,t=5) {
-  setTimeout(function(){ HideId(id) }, (t*1000));
+// hide by id with interval
+function HideIdWi(id) {
+  setInterval(function(){ HideId(id) }, 500);
 }
 // hide by img url
 function HideImg(imgurl){
@@ -98,7 +98,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("home-bnner2-content")
     HideId("player-side-left")
     HideId("player-side-right")
-    HideIdWD("p_native")
+    HideIdWi("p_native")
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
@@ -112,7 +112,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("ftads")
     HideId("ftadss")
 // dunia21
-    HideIdWD("overlay-pop",8)
+    HideIdWi("overlay-pop",8)
 
 }
 
