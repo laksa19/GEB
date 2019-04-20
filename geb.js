@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.1
+// @version      0.0.2
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @author       Laksamadi Guko
@@ -91,6 +91,15 @@ if (domain == "indoxxi"){
     HideClass("inner-floatbanner-bottom")
 } else if(domain == "grandxxi"){
 // grandxxi
+    HideGif()
+} else if(domain == "nontondrakor"){
+// nontondrakor
+    HideGif()
+} else if(domain == "newindoxx1"){
+// newindoxx1
+    HideGif()
+} else if(domain == "nontonindoxx1"){
+// newindoxx1
     HideGif()
 }
 
