@@ -21,3 +21,6 @@ Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa
 5. lk21online.net
 6. lk21.vip
 7. lk21.red
+8. nontondrakor.co
+9. newindoxx1.com
+10. nontonindoxx1.com
