@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.8
+// @version      0.0.9
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -76,6 +76,7 @@ var domArr = ["",
               "indoxxi",
               "anoboy",
               "lk21online",
+              "mangaku",
 
              ];
 
@@ -99,6 +100,9 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("tengah")
 // lk21
     HideClass("inner-floatbanner-bottom")
+// mangaku
+    HideId("ftads")
+    HideId("ftadss")
 }
 
 })();
