@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.9
+// @version      0.0.10
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -29,6 +29,10 @@ function HideClass(classname){
         }
     }
 }
+// hide by classname with delay
+function HideClassWD(classname,t=5) {
+  setTimeout(function(){ HideClass(classname) }, (t*1000));
+}
 // hide by id
 function HideId(id){
     var el = document.getElementById(id);
@@ -36,6 +40,10 @@ function HideId(id){
     el.style.display = "none";
     console.log("[GEB] Block Element Id : "+(el));
     }
+}
+// hide by id with delay
+function HideIdWD(id,t=5) {
+  setTimeout(function(){ HideId(id) }, (t*1000));
 }
 // hide by img url
 function HideImg(imgurl){
@@ -90,7 +98,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("home-bnner2-content")
     HideId("player-side-left")
     HideId("player-side-right")
-    HideId("p_native")
+    HideIdWD("p_native")
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
@@ -103,6 +111,7 @@ if ((domArr.indexOf(domain)) > 0){
 // mangaku
     HideId("ftads")
     HideId("ftadss")
+
 }
 
 })();
