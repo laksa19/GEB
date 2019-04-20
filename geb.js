@@ -7,7 +7,6 @@
 // @version      0.0.7
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
-// @author       Laksamadi Guko
 // @match        *://*/*
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
