@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.4
+// @version      0.0.5
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @author       Laksamadi Guko
@@ -58,6 +58,23 @@ function HideGif(){
     }
 }
 
+// domain list
+var domArr = ["",
+              "grandxxi",
+              "nontondrakor",
+              "newindoxx1",
+              "nontonindoxx1",
+              "nanime",
+              "nontonani",
+              "animeku",
+              "dunia21",
+              "bioskopkeren",
+              "lk21",
+              "indoxxi",
+              "anoboy",
+              "lk21online",
+
+             ];
 
 // hide element
 if (domain == "indoxxi"){
@@ -67,48 +84,23 @@ if (domain == "indoxxi"){
     HideId("player-side-left")
     HideId("player-side-right")
     HideId("p_native")
-    HideGif()
 } else if(domain == "anoboy"){
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
     HideId("judi")
     HideId("rn_ad_native_t4745")
-    HideGif()
-} else if(domain == "bioskopkeren"){
-// bioskopkeren
-    HideGif()
-} else if(domain == "dunia21"){
-// dunia21
-    HideGif()
 } else if(domain == "lk21online"){
 // lk21online
     HideId("tengah")
-    HideGif()
 } else if(domain == "lk21"){
 // lk21
-    HideGif()
     HideClass("inner-floatbanner-bottom")
-} else if(domain == "grandxxi"){
-// grandxxi
-    HideGif()
-} else if(domain == "nontondrakor"){
-// nontondrakor
-    HideGif()
-} else if(domain == "newindoxx1"){
-// newindoxx1
-    HideGif()
-} else if(domain == "nontonindoxx1"){
-// newindoxx1
-    HideGif()
-} else if(domain == "nanime"){
-// nanime
-    HideGif()
-} else if(domain == "nontonani"){
-// nontonani
-    HideGif()
-} else if(domain == "animeku"){
-// nanime
+
+}
+
+// hide Gif images
+if ((domArr.indexOf(domain)) > 0){
     HideGif()
 }
 
