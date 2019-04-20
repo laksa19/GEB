@@ -5,7 +5,7 @@ Cara mudah untuk blok iklan (GIF) yang membandel.
 
 ### Download
 1. Tampermonkey [Chrome Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) -:- [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-2. GEB [Userscript](https://raw.githubusercontent.com/laksa19/GEB/master/geb.js)
+2. GEB [UserScript](https://raw.githubusercontent.com/laksa19/GEB/master/geb.js)
 
 ### Tutorial
 [Video Tutorial](https://drive.google.com/file/d/1LGqHC0R_k5nFITYlhyl4ECLIcTFdSaPp/view?usp=sharing)
