@@ -27,3 +27,4 @@ Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa
 11. nanime.in
 12. nontonani.me
 13. animeku.tv
+14. mangaku.in
