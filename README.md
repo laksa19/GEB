@@ -24,3 +24,4 @@ Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa
 8. nontondrakor.co
 9. newindoxx1.com
 10. nontonindoxx1.com
+11. nanime.in
