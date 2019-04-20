@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.6
+// @version      0.0.7
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @author       Laksamadi Guko
@@ -25,7 +25,8 @@ function HideClass(classname){
     var el = document.getElementsByClassName(classname);
     if(el){
         for (i = 0; i < (el.length); i++) {
-            return (el[i].style.display = "none")
+            el[i].style.display = "none";
+            console.log("[GEB] Block Element Class : "+(el));
         }
     }
 }
@@ -33,7 +34,8 @@ function HideClass(classname){
 function HideId(id){
     var el = document.getElementById(id);
     if(el){
-    return (el.style.display = "none")
+    el.style.display = "none";
+    console.log("[GEB] Block Element Id : "+(el));
     }
 }
 // hide by img url
@@ -43,6 +45,7 @@ function HideImg(imgurl){
         for (i = 0; i < (el.length); i++) {
             if (el[i].src == imgurl){
             return (el[i].style.display = "none")
+            console.log("[GEB] Block image from : "+(el[i].src))
         }
     }
 }
@@ -54,6 +57,7 @@ function HideGif(){
         for (i = 0; i < (el.length); i++) {
             if (((el[i].src).split(".").pop()) == "gif"){
             (el[i].style.display = "none")
+            console.log("[GEB] Block image from : "+(el[i].src))
         }
     }
 }
@@ -79,7 +83,7 @@ var domArr = ["",
 // hide Gif & elements
 if ((domArr.indexOf(domain)) > 0){
 // Gif images
-    HideGif()
+    //HideGif()
 // elements
 // indoxxi
     HideId("home-bnner-content")
