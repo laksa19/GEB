@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.3
+// @version      0.0.4
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @author       Laksamadi Guko
@@ -102,6 +102,12 @@ if (domain == "indoxxi"){
 // newindoxx1
     HideGif()
 } else if(domain == "nanime"){
+// nanime
+    HideGif()
+} else if(domain == "nontonani"){
+// nontonani
+    HideGif()
+} else if(domain == "animeku"){
 // nanime
     HideGif()
 }
