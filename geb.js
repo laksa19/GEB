@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.17
+// @version      0.0.18
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -123,6 +123,9 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("ftadss")
 // dunia21
     HideIdWi("overlay-pop")
+// nontondrakor
+    HideClassWi("mfp-content")
+    HideClassWi("mfp-bg")
 
 }
 
