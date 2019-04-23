@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.18
+// @version      0.0.19
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -55,6 +55,31 @@ function HideIdWi(id) {
         clearInterval(intervalId)
     },30000)
 }
+
+// hide by tag name
+function HideTagId(tag,tid,sid,indx=0){
+    var i;
+    var el = document.getElementsByTagName(tag);
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            var getId = el[i].id;
+            var Id = getId.split(sid)[indx];
+            if(Id == tid){
+            el[i].style.display = "none";
+            console.log("[GEB] Block Element Tag Id : "+(el));
+            }
+        }
+    }
+}
+// hide by tag name with inteval
+function HideTagIdWi(tag,tid,sid,indx=0) {
+  var intervalId = setInterval(function(){
+      HideTagId(tag,tid,sid,indx)
+  }, 500);
+    setTimeout(function(){
+        clearInterval(intervalId)
+    },30000)
+}
 // hide by img url
 function HideImg(imgurl){
     var i;
@@ -95,6 +120,7 @@ var domArr = ["",
               "anoboy",
               "lk21online",
               "mangaku",
+              "ganool",
 
              ];
 
@@ -126,7 +152,10 @@ if ((domArr.indexOf(domain)) > 0){
 // nontondrakor
     HideClassWi("mfp-content")
     HideClassWi("mfp-bg")
+// ganool
+    HideTagIdWi("div","epom","-")
+    HideClassWi("check_notify")
+    HideClassWi("adsincenter")
 
 }
-
 })();
