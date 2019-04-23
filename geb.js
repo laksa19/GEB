@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.16
+// @version      0.0.17
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -43,7 +43,6 @@ function HideId(id){
     var el = document.getElementById(id);
     if(el){
     el.style.display = "none";
-        //clearInterval(HideIdWi);
     console.log("[GEB] Block Element Id : "+(el));
     }
 }
