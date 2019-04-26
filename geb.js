@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.19
+// @version      0.0.20
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -40,11 +40,15 @@ function HideClassWi(classname) {
 }
 // hide by id
 function HideId(id){
-    var el = document.getElementById(id);
+    var i;
+    var el = document.querySelectorAll('[id^='+id+']')
     if(el){
-    el.style.display = "none";
-    console.log("[GEB] Block Element Id : "+(el));
+        for (i = 0; i < (el.length); i++) {
+            el[i].style.display = "none";
+            console.log("[GEB] Block Element Id : "+(el));
+        }
     }
+
 }
 // hide by id with interval
 function HideIdWi(id) {
