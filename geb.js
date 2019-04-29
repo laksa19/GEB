@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.21
+// @version      0.0.22
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -60,14 +60,14 @@ function HideIdWi(id) {
     },30000)
 }
 
-// hide by tag name
-function HideTagId(tag,tid,sid,indx=0){
+// hide by tag name & id
+function HideTagId(tag,tid,sid,eid){
     var i;
     var el = document.getElementsByTagName(tag);
     if(el){
         for (i = 0; i < (el.length); i++) {
             var getId = el[i].id;
-            var Id = getId.split(sid)[indx];
+            var Id = getId.substring(sid,eid);
             if(Id == tid){
             el[i].style.display = "none";
             console.log("[GEB] Block Element Tag Id : "+(el));
@@ -75,10 +75,34 @@ function HideTagId(tag,tid,sid,indx=0){
         }
     }
 }
-// hide by tag name with inteval
-function HideTagIdWi(tag,tid,sid,indx=0) {
+// hide by tag name & id with inteval
+function HideTagIdWi(tag,tid,sid,eid){
   var intervalId = setInterval(function(){
-      HideTagId(tag,tid,sid,indx)
+      HideTagId(tag,tid,sid,eid)
+  }, 500);
+    setTimeout(function(){
+        clearInterval(intervalId)
+    },30000)
+}
+
+// hide by tag name & class
+function HideTagStyle(tag,styleProp,stylePropValue){
+    var i;
+    var el = document.getElementsByTagName(tag);
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            var style = getStyle(el[i], styleProp)
+            if(style == stylePropValue){
+            el[i].style.display = "none";
+            console.log("[GEB] Block Element Tag Id : "+(el));
+            }
+        }
+    }
+}
+// hide by tag name & class with inteval
+function HideTagStyleWi(tag,styleProp,stylePropValue){
+  var intervalId = setInterval(function(){
+      HideTagStyle(tag,styleProp,stylePropValue)
   }, 500);
     setTimeout(function(){
         clearInterval(intervalId)
@@ -106,6 +130,36 @@ function HideGif(){
             console.log("[GEB] Block image from : "+(el[i].src))
         }
     }
+}
+
+//https://gist.github.com/cms/369133
+function getStyle(el, styleProp) {
+  var value, defaultView = el.ownerDocument.defaultView;
+  // W3C standard way:
+  if (defaultView && defaultView.getComputedStyle) {
+    // sanitize property name to css notation (hypen separated words eg. font-Size)
+    styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+    return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+  } else if (el.currentStyle) { // IE
+    // sanitize property name to camelCase
+    styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
+      return letter.toUpperCase();
+    });
+    value = el.currentStyle[styleProp];
+    // convert other units to pixels on IE
+    if (/^\d+(em|pt|%|ex)?$/i.test(value)) {
+      return (function(value) {
+        var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+        el.runtimeStyle.left = el.currentStyle.left;
+        el.style.left = value || 0;
+        value = el.style.pixelLeft + "px";
+        el.style.left = oldLeft;
+        el.runtimeStyle.left = oldRsLeft;
+        return value;
+      })(value);
+    }
+    return value;
+  }
 }
 
 // domain list
@@ -153,15 +207,21 @@ if ((domArr.indexOf(domain)) > 0){
 // mangaku
     HideId("ftads")
     HideId("ftadss")
+    HideId("cba")
+    HideId("kanan")
     HideClass("particles-js-canvas-el")
     HideClass("grecaptcha-logo")
+    HideClass("kiri")
 // dunia21
     HideIdWi("overlay-pop")
 // nontondrakor
     HideClassWi("mfp-content")
     HideClassWi("mfp-bg")
 // ganool
-    HideTagIdWi("div","epom","-")
+    HideTagIdWi("div","epom",0,4)
+    HideTagIdWi("a","lk",0,2)
+    HideTagStyleWi("div","z-index",2147483647)
+    HideTagStyleWi("div","z-index",3000)
     HideClassWi("check_notify")
     HideClassWi("adsincenter")
 
