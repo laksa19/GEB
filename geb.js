@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.24
+// @version      0.0.25
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -183,7 +183,6 @@ var domArr = ["",
              ];
 
 // hide Gif & elements
-function runGEB(){
 if ((domArr.indexOf(domain)) > 0){
 // Gif images
     HideGif()
@@ -196,7 +195,6 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("p_native")
     HideTagIdWi("div","pc-player-bar-close"," ")
     HideTagIdWi("div","overlay"," ")
-    HideClass("jwseed")
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
@@ -227,12 +225,13 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("check_notify")
     HideClassWi("adsincenter")
 
-}}
-window.onload=function(){
-    runGEB()
 }
+
 function clickBody() {
-    runGEB()
+    if ((domArr.indexOf(domain)) > 0){
+        HideGif()
+        HideClass("jwseed")
+    }
 }
 document.body.addEventListener("click", clickBody)
 })();
