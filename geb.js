@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.25
+// @version      0.0.26
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -195,6 +195,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("p_native")
     HideTagIdWi("div","pc-player-bar-close"," ")
     HideTagIdWi("div","overlay"," ")
+    HideClassWi("jwseed")
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
