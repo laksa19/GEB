@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.22
+// @version      0.0.23
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -183,10 +183,12 @@ var domArr = ["",
              ];
 
 // hide Gif & elements
+function runGEB(){
 if ((domArr.indexOf(domain)) > 0){
 // Gif images
     HideGif()
 // elements
+if ((domArr.indexOf(domain)) > 0){
 // indoxxi
     HideId("home-bnner-content")
     HideId("home-bnner2-content")
@@ -195,15 +197,20 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("p_native")
     HideTagIdWi("div","pc-player-bar-close"," ")
     HideTagIdWi("div","overlay"," ")
+    HideClass("jwseed")
+} else if ((domArr.indexOf(domain)) > 0){
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
     HideId("judi")
     HideId("rn_ad_native_t4745")
+} else if ((domArr.indexOf(domain)) > 0){
 // lk21online
     HideId("tengah")
+} else if ((domArr.indexOf(domain)) > 0){
 // lk21
     HideClass("inner-floatbanner-bottom")
+} else if ((domArr.indexOf(domain)) > 0){
 // mangaku
     HideId("ftads")
     HideId("ftadss")
@@ -212,11 +219,14 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("particles-js-canvas-el")
     HideClass("grecaptcha-logo")
     HideClass("kiri")
+} else if ((domArr.indexOf(domain)) > 0){
 // dunia21
     HideIdWi("overlay-pop")
+} else if ((domArr.indexOf(domain)) > 0){
 // nontondrakor
     HideClassWi("mfp-content")
     HideClassWi("mfp-bg")
+} else if ((domArr.indexOf(domain)) > 0){
 // ganool
     HideTagIdWi("div","epom",0,4)
     HideTagIdWi("a","lk",0,2)
@@ -225,5 +235,12 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("check_notify")
     HideClassWi("adsincenter")
 
+}}}
+window.onload=function(){
+    runGEB()
 }
+function clickBody() {
+    runGEB()
+}
+document.body.addEventListener("click", clickBody)
 })();
