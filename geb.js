@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.32
+// @version      0.0.33
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -26,6 +26,15 @@ function HideClass(classname){
         for (i = 0; i < (el.length); i++) {
             el[i].style.display = "none";
             console.log("[GEB] Block Element Class : "+(el));
+        }
+    }
+}
+function ClickClass(classname){
+    var i;
+    var el = document.getElementsByClassName(classname);
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            el[i].click();
         }
     }
 }
@@ -182,6 +191,7 @@ var domArr = ["",
               "oploverz",
               "komikid",
               "animeku",
+              "duniafilm21",
 
              ];
 
@@ -228,6 +238,13 @@ if ((domArr.indexOf(domain)) > 0){
     HideTagStyleWi("div","z-index",3000)
     HideClassWi("check_notify")
     HideClassWi("adsincenter")
+    HideIdWi("top-banner")
+    HideIdWi("mbanner")
+    HideIdWi("float-1-wrap")
+    HideIdWi("float-2-wrap")
+    HideIdWi("popup-banner")
+    HideIdWi("ptbanner")
+    HideIdWi("middle-banner")
 // oploverz
     HideClassWi("headads")
     HideClassWi("branding__top")
@@ -244,6 +261,11 @@ if ((domArr.indexOf(domain)) > 0){
 // animeku
     HideClassWi("videoad")
     HideIdWi("mg-player-bar")
+// duniafilm21
+    HideId("floatcenter")
+    ClickClass("reklamgec")
+
+
 
 // color theme
 var meta = document.createElement('meta');
