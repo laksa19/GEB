@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.26
+// @version      0.0.27
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -179,6 +179,8 @@ var domArr = ["",
               "lk21online",
               "mangaku",
               "ganool",
+              "oploverz",
+              "komikid",
 
              ];
 
@@ -225,6 +227,21 @@ if ((domArr.indexOf(domain)) > 0){
     HideTagStyleWi("div","z-index",3000)
     HideClassWi("check_notify")
     HideClassWi("adsincenter")
+// oploverz
+    HideClassWi("headads")
+    HideClassWi("branding__top")
+    HideClassWi("branding__bottom")
+    HideIdWi("ctr_banner")
+    HideIdWi("innity_adslot_200017")
+// komkikid
+    HideIdWi("cfs_top_div")
+    HideIdWi("ADSKOM_ASYNC_TAG_DIV_0.07135191683956599")
+    HideIdWi("ADSKOM_ASYNC_TAG_DIV_0.24196291894850086")
+    HideIdWi("gn_delivery_1158111_1c0d387a")
+    HideClassWi("ads-large")
+    HideClass("ads")
+    HideTagIdWi("div","id",0,2)
+    HideTagIdWi("a","id",0,2)
 
 }
 
