@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.29
+// @version      0.0.30
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -233,7 +233,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("branding__top")
     HideClassWi("branding__bottom")
     HideIdWi("ctr_banner")
-    HideIdWi("innity_adslot_200017")
+    HideTagIdWi("div","innity_adslot",0,13)
 // komkikid
     HideIdWi("cfs_top_div")
     HideTagIdWi("div","gn_delivery",0,11)
