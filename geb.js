@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.37
+// @version      0.0.39
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -192,7 +192,7 @@ function getStyle(el, styleProp) {
 }
 
 // domain list
-var domArr = ["",
+var domArray = ["",
               "grandxxi",
               "nontondrakor",
               "newindoxx1",
@@ -214,83 +214,101 @@ var domArr = ["",
               "duniafilm21",
 
              ];
+// domain list
+var ElArray = [
+    "id#home-bnner-content",
+    "id#home-bnner2-content",
+    "id#player-side-left",
+    "id#player-side-right",
+    "idwi#p_native",
+    "idwi#tutor",
+    "clswi#jwseed",
+    "cls#btn-watch-area",
+    "cls#block-trailer",
+    "cls#home_baner",
+    "cls#sidebar",
+    "id#judi",
+    "id#tengah",
+    "cls#inner-floatbanner-bottom",
+    "id#ftads",
+    "id#ftadss",
+    "id#cba",
+    "id#kanan",
+    "cls#particles-js-canvas-el",
+    "cls#grecaptcha-logo",
+    "cls#kiri",
+    "idwi#overlay-pop",
+    "clswi#mfp-content",
+    "clswi#mfp-bg",
+    "clswi#check_notify",
+    "clswi#adsincenter",
+    "idwi#top-banner",
+    "idwi#mbanner",
+    "idwi#float-1-wrap",
+    "idwi#float-2-wrap",
+    "idwi#popup-banner",
+    "idwi#ptbanner",
+    "idwi#middle-banner",
+    "clswi#headads",
+    "clswi#branding__top",
+    "clswi#branding__bottom",
+    "idwi#ctr_banner",
+    "idwi#cfs_top_div",
+    "clswi#ads-large",
+    "cls#ads",
+    "clswi#videoad",
+    "idwi#mg-player-bar",
+    "id#floatcenter",
+    "idwi#pc-player-bar-close",
+    "tagidwi#div#overlay#0#7",
+    "tagidwi#div#epom#0#4",
+    "tagidwi#a#lk#0#2",
+    "tagidwi#div#innity_adslot#0#13",
+    "tagidwi#div#gn_delivery#0#11",
+    "tagidwi#div#id#0#2",
+    "tagidwi#div#epom#0#4",
+    "tagidwi#a#id#0#2",
+    "id#rn_ad_native_t4745",
+    "tagstwi#div#z-index#2147483647",
+    "tagstwi#div#z-index#3000",
+    "clickcls#reklamgec",
+    "clickcls#mvi-cover",
+    "clickidto#server-list-close",
+
+
+
+];
 
 // hide Gif & elements
-if ((domArr.indexOf(domain)) > 0){
+if ((domArray.indexOf(domain)) > 0){
 // Gif images
     HideGif()
 // elements
-// indoxxi
-    HideId("home-bnner-content")
-    HideId("home-bnner2-content")
-    HideId("player-side-left")
-    HideId("player-side-right")
-    HideIdWi("p_native")
-    HideTagIdWi("div","pc-player-bar-close"," ")
-    HideTagIdWi("div","overlay"," ")
-    HideClassWi("jwseed")
-    HideClass("btn-watch-area")
-    HideClass("block-trailer")
-    HideIdWi("tutor")
-    ClickClass("mvi-cover")
-    ClickIdTo("server-list-close")
-// anoboy
-    HideClass("home_baner")
-    HideClass("sidebar")
-    HideId("judi")
-    HideId("rn_ad_native_t4745")
-// lk21online
-    HideId("tengah")
-// lk21
-    HideClass("inner-floatbanner-bottom")
-// mangaku
-    HideId("ftads")
-    HideId("ftadss")
-    HideId("cba")
-    HideId("kanan")
-    HideClass("particles-js-canvas-el")
-    HideClass("grecaptcha-logo")
-    HideClass("kiri")
-// dunia21
-    HideIdWi("overlay-pop")
-// nontondrakor
-    HideClassWi("mfp-content")
-    HideClassWi("mfp-bg")
-// ganool
-    HideTagIdWi("div","epom",0,4)
-    HideTagIdWi("a","lk",0,2)
-    HideTagStyleWi("div","z-index",2147483647)
-    HideTagStyleWi("div","z-index",3000)
-    HideClassWi("check_notify")
-    HideClassWi("adsincenter")
-    HideIdWi("top-banner")
-    HideIdWi("mbanner")
-    HideIdWi("float-1-wrap")
-    HideIdWi("float-2-wrap")
-    HideIdWi("popup-banner")
-    HideIdWi("ptbanner")
-    HideIdWi("middle-banner")
-// oploverz
-    HideClassWi("headads")
-    HideClassWi("branding__top")
-    HideClassWi("branding__bottom")
-    HideIdWi("ctr_banner")
-    HideTagIdWi("div","innity_adslot",0,13)
-// komkikid
-    HideIdWi("cfs_top_div")
-    HideTagIdWi("div","gn_delivery",0,11)
-    HideClassWi("ads-large")
-    HideClass("ads")
-    HideTagIdWi("div","id",0,2)
-    HideTagIdWi("a","id",0,2)
-// animeku
-    HideClassWi("videoad")
-    HideIdWi("mg-player-bar")
-// duniafilm21
-    HideId("floatcenter")
-    ClickClass("reklamgec")
-
-
+var i;
+for (i = 0; i < (ElArray.length); i++) {
+    var El = ElArray[i].split("#")
+    if (El[0] == "id"){
+        HideId(El[1])
+    } else if (El[0] == "idwi"){
+        HideIdWi(El[1])
+    } else if (El[0] == "cls"){
+        HideClass(El[1])
+    } else if (El[0] == "clswi"){
+        HideClassWi(El[1])
+    } else if (El[0] == "tagid"){
+        HideTagId(El[1],El[2],El[3],El[4])
+    } else if (El[0] == "tagidwi"){
+        HideTagId(El[1],El[2],El[3],El[4])
+    } else if (El[0] == "tagst"){
+        HideTagStyle(El[1],El[2],El[3])
+    } else if (El[0] == "tagstwi"){
+        HideTagStyleWi(El[1],El[2],El[3])
+    } else if (El[0] == "clickcls"){
+        ClickClass(El[1])
+    } else if (El[0] == "clickidto"){
+        ClickIdTo(El[1])
+    }
+}
 
 // color theme
 var meta = document.createElement('meta');
@@ -300,7 +318,7 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 }
 
 function clickBody() {
-    if ((domArr.indexOf(domain)) > 0){
+    if ((domArray.indexOf(domain)) > 0){
         HideGif()
         HideClass("jwseed")
     }
