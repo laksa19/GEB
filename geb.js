@@ -29,15 +29,7 @@ function HideClass(classname){
         }
     }
 }
-function ClickClass(classname){
-    var i;
-    var el = document.getElementsByClassName(classname);
-    if(el){
-        for (i = 0; i < (el.length); i++) {
-            el[i].click();
-        }
-    }
-}
+
 // hide by classname with inteval
 function HideClassWi(classname) {
   var intervalId = setInterval(function(){
@@ -47,6 +39,17 @@ function HideClassWi(classname) {
         clearInterval(intervalId)
     },30000)
 }
+// click class
+function ClickClass(classname){
+    var i;
+    var el = document.getElementsByClassName(classname);
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            el[i].click();
+        }
+    }
+}
+
 // hide by id
 function HideId(id){
     var i;
@@ -67,6 +70,23 @@ function HideIdWi(id) {
     setTimeout(function(){
         clearInterval(intervalId)
     },30000)
+}
+// click by id
+function ClickId(id){
+    var i;
+    var el = document.querySelectorAll('[id^='+id+']')
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            el[i].click();
+        }
+    }
+
+}
+// hide by click id with timeout
+function ClickIdTo(id,to=10) {
+    setTimeout(function(){
+        ClickId(id)
+    },(to*1000))
 }
 
 // hide by tag name & id
@@ -209,6 +229,11 @@ if ((domArr.indexOf(domain)) > 0){
     HideTagIdWi("div","pc-player-bar-close"," ")
     HideTagIdWi("div","overlay"," ")
     HideClassWi("jwseed")
+    HideClass("btn-watch-area")
+    HideClass("block-trailer")
+    HideIdWi("tutor")
+    ClickClass("mvi-cover")
+    ClickIdTo("server-list-close")
 // anoboy
     HideClass("home_baner")
     HideClass("sidebar")
