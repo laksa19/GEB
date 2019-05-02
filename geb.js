@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.30
+// @version      0.0.31
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -245,6 +245,11 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("videoad")
     HideIdWi("mg-player-bar")
 
+// color theme
+var meta = document.createElement('meta');
+meta.name = "theme-color";
+meta.content = "#3a4149";
+document.getElementsByTagName('head')[0].appendChild(meta);
 }
 
 function clickBody() {
