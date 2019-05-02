@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.28
+// @version      0.0.29
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -181,6 +181,7 @@ var domArr = ["",
               "ganool",
               "oploverz",
               "komikid",
+              "animeku",
 
              ];
 
@@ -240,6 +241,9 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("ads")
     HideTagIdWi("div","id",0,2)
     HideTagIdWi("a","id",0,2)
+// animeku
+    HideClassWi("videoad")
+    HideIdWi("mg-player-bar")
 
 }
 
