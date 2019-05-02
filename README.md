@@ -13,19 +13,3 @@ Cara mudah untuk blok iklan (GIF) yang membandel.
 ### Ajukan Website
 Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa19/GEB/issues/1)
 
-### Website GEB
-1. indoxxi.cx
-2. grandxxi.tv
-3. bioskopkeren.vip
-4. dunia21.me
-5. lk21online.net
-6. lk21.vip
-7. lk21.red
-8. nontondrakor.co
-9. newindoxx1.com
-10. nontonindoxx1.com
-11. nanime.in
-12. nontonani.me
-13. animeku.tv
-14. mangaku.in
-15. ganool.ws
