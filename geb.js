@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.41
+// @version      0.0.43
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -228,8 +228,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("pc-player-bar-close")
     HideTagIdWi("div","overlay",0,7)
     HideClassWi("jwseed")
-    HideClass("btn-watch-area")
-    HideClass("block-trailer")
+    HideClass("trailerz")
     HideIdWi("tutor")
     ClickClass("mvi-cover")
     ClickIdTo("server-list-close")
@@ -277,6 +276,8 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("mg-player-bar")
     HideId("floatcenter")
     ClickClass("reklamgec")
+    HideId("promoapk")
+    HideClass("chatango-btn")
 
 
 
