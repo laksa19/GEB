@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.50
+// @version      0.0.53
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -290,6 +290,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("afs_ads")
     HideIdWi("tv-play")
     ClickId("button-lanjut")
+    ClickIdTo("ep-1",3)
 
 
 
