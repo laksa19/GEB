@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.47
+// @version      0.0.50
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -289,6 +289,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("chatango-btn")
     HideClass("afs_ads")
     HideIdWi("tv-play")
+    ClickId("button-lanjut")
 
 
 
@@ -297,11 +298,11 @@ var meta = document.createElement('meta');
 meta.name = "theme-color";
 meta.content = "#3a4149";
 document.getElementsByTagName('head')[0].appendChild(meta);
-
+localStorage.setItem("coly", "1");
 
 document.body.addEventListener("click", clickGEB)
 
 }
-
+ClickId("button-lanjut")
 
 })();
