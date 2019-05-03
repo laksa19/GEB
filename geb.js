@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.56
+// @version      0.0.57
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -213,6 +213,7 @@ var domArr = ["",
               "komikid",
               "animeku",
               "duniafilm21",
+              "vidio",
 
              ];
 // click GEB
@@ -291,6 +292,8 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("tv-play")
     ClickId("button-lanjut")
     ClickIdTo("ep-1",3)
+    HideId("livestreaming-player__player_ima-ad-container")
+    HideClassWi("banner-ad")
 
 
 
