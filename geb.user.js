@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.67
+// @version      0.0.70
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -12,6 +12,7 @@
 // ==/UserScript==
 
 (function() {
+    "use strict";
 // get hostname
 var hostname = window.location.hostname;
 var domain = hostname.split(".")[0];
@@ -171,7 +172,7 @@ function getStyle(el, styleProp) {
     // sanitize property name to css notation (hypen separated words eg. font-Size)
     styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
     return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
-  } else if (el.currentStyle) { // IE
+  } if (el.currentStyle) { // IE
     // sanitize property name to camelCase
     styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
       return letter.toUpperCase();
@@ -194,7 +195,7 @@ function getStyle(el, styleProp) {
 }
 
 // domain list
-var domArr = ["",
+var domArray = ["",
               "grandxxi",
               "nontondrakor",
               "newindoxx1",
@@ -217,95 +218,139 @@ var domArr = ["",
               "vidio",
               "nontonanimeindo",
               "zqscore",
+              "animekompi",
+              "samehadaku"
 
              ];
+
+// domain index
+var domIndex = domArray.indexOf(domain);
+
 // click GEB
 function clickGEB() {
-    if ((domArr.indexOf(domain)) > 0){
+    if ((domArray.indexOf(domain)) > 0){
         HideGif()
         HideClass("jwseed")
         HideClassWi("afs_ads")
         HideClassWi("logo-kanan")
     }
 }
+
 // hide Gif & elements
-if ((domArr.indexOf(domain)) > 0){
+if (domIndex > 0){
 // Gif images
     HideGif()
 // elements
-    HideId("home-bnner-content")
-    HideId("home-bnner2-content")
-    HideId("player-side-left")
-    HideId("player-side-right")
-    HideIdWi("p_native")
-    HideIdWi("pc-player-bar-close")
-    HideTagIdWi("div","overlay")
-    HideClassWi("jwseed",30)
-    HideClass("trailerz")
-    HideIdWi("tutor")
-    ClickClass("mvi-cover")
-    ClickIdTo("server-list-close")
-    HideClass("home_baner")
-    HideClass("sidebar")
-    HideId("judi")
-    HideTagId("div","rn_ad_native")
-    HideTagId("div","rn_ad_")
-    HideIdWi("rn_ad_native_t4745")
-    HideClassWi("mn-related-container")
-    HideId("tengah")
-    HideClass("inner-floatbanner-bottom")
-    HideId("ftads")
-    HideId("ftadss")
-    HideId("cba")
-    HideId("kanan")
-    HideClass("particles-js-canvas-el")
-    HideClass("grecaptcha-logo")
-    HideClass("kiri")
-    HideIdWi("overlay-pop",30)
-    HideClassWi("mfp-content")
-    HideClassWi("mfp-bg")
-    HideTagIdWi("div","epom")
-    HideTagIdWi("a","lk")
-    HideTagStyleWi("div","z-index",2147483647)
-    HideTagStyleWi("div","z-index",3000)
-    HideClassWi("check_notify")
-    HideClassWi("adsincenter")
-    HideIdWi("top-banner")
-    HideIdWi("mbanner")
-    HideIdWi("float-1-wrap")
-    HideIdWi("float-2-wrap")
-    HideIdWi("popup-banner")
-    HideIdWi("ptbanner")
-    HideIdWi("middle-banner")
-    HideClassWi("headads")
-    HideClassWi("branding__top")
-    HideClassWi("branding__bottom")
-    HideIdWi("ctr_banner")
-    HideTagIdWi("div","innity_adslot")
-    HideIdWi("cfs_top_div")
-    HideTagIdWi("div","gn_delivery")
-    HideClassWi("ads-large")
-    HideClass("ads")
-    HideTagIdWi("div","id")
-    HideTagIdWi("a","id")
-    HideClassWi("videoad")
-    HideIdWi("mg-player-bar")
-    HideId("floatcenter")
-    ClickClass("reklamgec")
-    HideId("promoapk")
-    HideClass("chatango-btn")
-    HideClass("afs_ads")
-    HideIdWi("tv-play")
-    ClickId("button-lanjut")
-    ClickIdTo("ep-1",3)
-    HideId("livestreaming-player__player_ima-ad-container")
-    HideClassWi("banner-ad")
-    ClickIdTo("player",0)
-    ClickClass("vjs-big-play-button")
-    HideClass("atop")
-    HideId("adsLeft")
-    HideId("adsRigth")
-
+    switch (domain){
+        case "indoxxi":
+            HideId("home-bnner-content")
+            HideId("home-bnner2-content")
+            HideId("player-side-left")
+            HideId("player-side-right")
+            HideIdWi("p_native")
+            HideIdWi("pc-player-bar-close")
+            HideTagIdWi("div","overlay")
+            HideClassWi("jwseed",30)
+            HideClass("trailerz")
+            HideIdWi("tutor")
+            ClickClass("mvi-cover")
+            ClickIdTo("server-list-close")
+            HideId("promoapk")
+            HideClass("chatango-btn")
+            HideClass("afs_ads")
+            HideIdWi("tv-play")
+            ClickId("button-lanjut")
+            ClickIdTo("ep-1",3)
+            ClickClass("reklamgec")
+            break;
+        case "anoboy":
+            HideClass("home_baner")
+            HideId("judi")
+            HideTagId("div","rn_ad_native")
+            HideTagId("div","rn_ad_")
+            HideIdWi("rn_ad_native_t4745")
+            HideClassWi("mn-related-container")
+            ClickClass("vjs-big-play-button")
+            ClickIdTo("player",0)
+            break;
+        case "lk21online":
+            HideId("tengah")
+            break;
+        case "lk21":
+            HideClass("inner-floatbanner-bottom")
+            break;
+        case "mangaku":
+            HideId("ftads")
+            HideId("ftadss")
+            HideId("cba")
+            HideId("kanan")
+            HideClass("particles-js-canvas-el")
+            HideClass("grecaptcha-logo")
+            HideClass("kiri")
+            break;
+        case "dunia21":
+            HideIdWi("overlay-pop",30)
+            break;
+        case "nontondrakor":
+            HideClassWi("mfp-content")
+            HideClassWi("mfp-bg")
+            break;
+        case "ganool":
+            HideTagIdWi("div","epom")
+            HideTagIdWi("a","lk")
+            HideTagStyleWi("div","z-index",2147483647)
+            HideTagStyleWi("div","z-index",3000)
+            HideClassWi("check_notify")
+            HideClassWi("adsincenter")
+            HideIdWi("top-banner")
+            HideIdWi("mbanner")
+            HideIdWi("float-1-wrap")
+            HideIdWi("float-2-wrap")
+            HideIdWi("popup-banner")
+            HideIdWi("ptbanner")
+            HideIdWi("middle-banner")
+            break;
+        case "oploverz":
+            HideClassWi("headads")
+            HideClassWi("branding__top")
+            HideClassWi("branding__bottom")
+            HideIdWi("ctr_banner")
+            HideTagIdWi("div","innity_adslot")
+            break;
+        case "komkikid":
+            HideIdWi("cfs_top_div")
+            HideTagIdWi("div","gn_delivery")
+            HideClassWi("ads-large")
+            HideClass("ads")
+            HideTagIdWi("div","id")
+            HideTagIdWi("a","id")
+            break;
+        case "animeku":
+            HideClassWi("videoad")
+            HideIdWi("mg-player-bar")
+            break;
+        case "duniafilm21":
+            HideId("floatcenter")
+            break;
+        case "vidio":
+            HideId("livestreaming-player__player_ima-ad-container")
+            HideClassWi("banner-ad")
+            break;
+        case "zqscore":
+            HideClass("atop")
+            HideId("adsLeft")
+            HideId("adsRigth")
+            break;
+        case "samehadaku":
+            HideClass("stream-item-widget-content")
+            HideClass("stream-item-top")
+            break;
+        case "animekompi":
+            HideClass("mainads")
+            HideClass("addads")
+            HideClass("left")
+            break;
+    }
 
 
 // color theme
