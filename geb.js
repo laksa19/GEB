@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.65
+// @version      0.0.67
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -302,6 +302,9 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("banner-ad")
     ClickIdTo("player",1)
     ClickClass("vjs-big-play-button")
+    HideClass("atop")
+    HideId("adsLeft")
+    HideId("adsRigth")
 
 
 
