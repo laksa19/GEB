@@ -8,7 +8,7 @@ Cara mudah untuk blok iklan (GIF) yang membandel.
 2. GEB [UserScript](https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js)
 
 ### Tutorial
-[Video Tutorial](https://drive.google.com/file/d/1LGqHC0R_k5nFITYlhyl4ECLIcTFdSaPp/view?usp=sharing)
+[Video Tutorial](https://drive.google.com/file/d/1BiKSNVJ-O56PwSg0qYzfmTDAhC5k2Vnq/view?usp=sharing)
 
 ### Ajukan Website
 Ajukan domain website yang ingin diblok, [klik di sini](https://github.com/laksa19/GEB/issues/1)
