@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.59
+// @version      0.0.61
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -143,7 +143,7 @@ function HideImg(imgurl){
     var el = document.getElementsByTagName('img');
         for (i = 0; i < (el.length); i++) {
             if (el[i].src == imgurl){
-            return (el[i].style.display = "none")
+            (el[i].style.display = "none")
             console.log("[GEB] Block image from : "+(el[i].src))
         }
     }
@@ -246,7 +246,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("home_baner")
     HideClass("sidebar")
     HideId("judi")
-    HideId("rn_ad_native_t4745")
+    HideTagId("div","rn_ad_native",0,12)
     HideId("tengah")
     HideClass("inner-floatbanner-bottom")
     HideId("ftads")
@@ -296,6 +296,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("livestreaming-player__player_ima-ad-container")
     HideClassWi("banner-ad")
     ClickIdTo("player",1)
+    ClickClass("vjs-big-play-button")
 
 
 
