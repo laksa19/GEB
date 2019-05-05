@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.61
+// @version      0.0.65
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -90,9 +90,10 @@ function ClickIdTo(id,to=10) {
 }
 
 // hide by tag name & id
-function HideTagId(tag,tid,sid,eid){
+function HideTagId(tag,tid,sid=0){
     var i;
     var el = document.getElementsByTagName(tag);
+    var eid = sid.length;
     if(el){
         for (i = 0; i < (el.length); i++) {
             var getId = el[i].id;
@@ -105,9 +106,9 @@ function HideTagId(tag,tid,sid,eid){
     }
 }
 // hide by tag name & id with inteval
-function HideTagIdWi(tag,tid,sid,eid,t=10){
+function HideTagIdWi(tag,tid,sid,t=10){
   var intervalId = setInterval(function(){
-      HideTagId(tag,tid,sid,eid)
+      HideTagId(tag,tid,sid)
   }, 500);
     setTimeout(function(){
         clearInterval(intervalId)
@@ -215,6 +216,7 @@ var domArr = ["",
               "duniafilm21",
               "vidio",
               "nontonanimeindo",
+              "zqscore",
 
              ];
 // click GEB
@@ -237,7 +239,7 @@ if ((domArr.indexOf(domain)) > 0){
     HideId("player-side-right")
     HideIdWi("p_native")
     HideIdWi("pc-player-bar-close")
-    HideTagIdWi("div","overlay",0,7)
+    HideTagIdWi("div","overlay")
     HideClassWi("jwseed",30)
     HideClass("trailerz")
     HideIdWi("tutor")
@@ -246,7 +248,10 @@ if ((domArr.indexOf(domain)) > 0){
     HideClass("home_baner")
     HideClass("sidebar")
     HideId("judi")
-    HideTagId("div","rn_ad_native",0,12)
+    HideTagId("div","rn_ad_native")
+    HideTagId("div","rn_ad_")
+    HideIdWi("rn_ad_native_t4745")
+    HideClassWi("mn-related-container")
     HideId("tengah")
     HideClass("inner-floatbanner-bottom")
     HideId("ftads")
@@ -259,8 +264,8 @@ if ((domArr.indexOf(domain)) > 0){
     HideIdWi("overlay-pop",30)
     HideClassWi("mfp-content")
     HideClassWi("mfp-bg")
-    HideTagIdWi("div","epom",0,4)
-    HideTagIdWi("a","lk",0,2)
+    HideTagIdWi("div","epom")
+    HideTagIdWi("a","lk")
     HideTagStyleWi("div","z-index",2147483647)
     HideTagStyleWi("div","z-index",3000)
     HideClassWi("check_notify")
@@ -276,13 +281,13 @@ if ((domArr.indexOf(domain)) > 0){
     HideClassWi("branding__top")
     HideClassWi("branding__bottom")
     HideIdWi("ctr_banner")
-    HideTagIdWi("div","innity_adslot",0,13)
+    HideTagIdWi("div","innity_adslot")
     HideIdWi("cfs_top_div")
-    HideTagIdWi("div","gn_delivery",0,11)
+    HideTagIdWi("div","gn_delivery")
     HideClassWi("ads-large")
     HideClass("ads")
-    HideTagIdWi("div","id",0,2)
-    HideTagIdWi("a","id",0,2)
+    HideTagIdWi("div","id")
+    HideTagIdWi("a","id")
     HideClassWi("videoad")
     HideIdWi("mg-player-bar")
     HideId("floatcenter")
