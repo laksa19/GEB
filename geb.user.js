@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.76
+// @version      0.0.79
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -281,7 +281,6 @@ if (domIndex > 0){
             HideIdWi("rn_ad_native_t4745")
             HideClassWi("mn-related-container")
             ClickClass("vjs-big-play-button")
-            ClickIdTo("player",0)
             break;
         case "lk21online":
             HideId("tengah")
@@ -386,6 +385,9 @@ if (domIndex > 0){
             break;
         case "layarcinema":
             HideId("ads-pop")
+            break;
+        case "nanime":
+            ClickIdTo("player",0)
             break;
 
     }
