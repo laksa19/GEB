@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.73
+// @version      0.0.76
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -196,30 +196,40 @@ function getStyle(el, styleProp) {
 
 // domain list
 var domArray = ["",
-              "grandxxi",
-              "nontondrakor",
-              "newindoxx1",
-              "nontonindoxx1",
-              "nanime",
-              "nontonani",
-              "animeku",
-              "dunia21",
-              "bioskopkeren",
-              "lk21",
-              "indoxxi",
-              "anoboy",
-              "lk21online",
-              "mangaku",
-              "ganool",
-              "oploverz",
-              "komikid",
-              "animeku",
-              "duniafilm21",
-              "vidio",
-              "nontonanimeindo",
-              "zqscore",
-              "animekompi",
-              "samehadaku"
+                "grandxxi",
+                "nontondrakor",
+                "newindoxx1",
+                "nontonindoxx1",
+                "nanime",
+                "nontonani",
+                "animeku",
+                "dunia21",
+                "bioskopkeren",
+                "lk21",
+                "indoxxi",
+                "anoboy",
+                "lk21online",
+                "mangaku",
+                "ganool",
+                "oploverz",
+                "komikid",
+                "animeku",
+                "duniafilm21",
+                "vidio",
+                "nontonanimeindo",
+                "zqscore",
+                "animekompi",
+                "samehadaku",
+                "kotakanime",
+                "animeindo",
+                "animehade",
+                "animersindo",
+                "animepos",
+                "bioskop45",
+                "layarxxi21",
+                "gosemut",
+                "indofilmxxi",
+                "layarcinema",
 
              ];
 
@@ -350,6 +360,34 @@ if (domIndex > 0){
             HideClass("addads")
             HideClass("left")
             break;
+        case "kotakanime":
+            HideClass("disads728px")
+            HideClass("disads300px")
+            HideClass("adspost728")
+            break;
+        case "animeindo":
+            HideTagId("iframe","frame-innity")
+            //HideClass("adshome-sidebar")
+            HideClass("in_up_ad-area")
+            HideClass("in_up_ad_game")
+            HideClass("text-html-box")
+            HideTagStyleWi("div","z-index",2147483647)
+            HideId("sct_banner_top")
+            HideClass("external")
+            break;
+        case "gosemut":
+            ClickClass("skip")
+            HideClass("ads-m")
+            HideId("adsR")
+            break;
+        case "indofilmxxi":
+            HideClass("idmuvi-topbanner-aftermenu")
+            HideClass("idmuvi-topplayer")
+            break;
+        case "layarcinema":
+            HideId("ads-pop")
+            break;
+
     }
 
 
