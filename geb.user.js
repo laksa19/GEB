@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GIF & Elements Blocker
 // @namespace    https://laksa19.github.io/GEB
-// @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
-// @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.js
+// @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
+// @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
 // @version      0.0.73
 // @author       Laksamadi Guko
