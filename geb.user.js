@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.79
+// @version      0.0.80
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -49,6 +49,16 @@ function ClickClass(classname){
             el[i].click();
         }
     }
+}
+
+// hide by classname with inteval
+function ClickClassWi(classname,t=10) {
+  var intervalId = setInterval(function(){
+      ClickClass(classname)
+  }, 500);
+    setTimeout(function(){
+        clearInterval(intervalId)
+    },(t*1000))
 }
 
 // hide by id
@@ -272,6 +282,8 @@ if (domIndex > 0){
             ClickId("button-lanjut")
             ClickIdTo("ep-1",3)
             ClickClass("reklamgec")
+            HideClassWi("ext-suggest-options")
+            ClickClass("fa-tv")
             break;
         case "anoboy":
             HideClass("home_baner")
@@ -280,7 +292,7 @@ if (domIndex > 0){
             HideTagId("div","rn_ad_")
             HideIdWi("rn_ad_native_t4745")
             HideClassWi("mn-related-container")
-            ClickClass("vjs-big-play-button")
+            ClickClassWi("vjs-big-play-button")
             break;
         case "lk21online":
             HideId("tengah")
