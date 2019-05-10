@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.85
+// @version      0.0.87
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -149,12 +149,12 @@ function HideTagStyleWi(tag,styleProp,stylePropValue,t=10){
         clearInterval(intervalId)
     },(t*1000))
 }
-// hide by img url
-function HideImg(imgurl){
+// hide by imgname
+function HideImg(imgname){
     var i;
     var el = document.getElementsByTagName('img');
         for (i = 0; i < (el.length); i++) {
-            if (el[i].src == imgurl){
+            if (((el[i].src).split("/").pop()) == imgname){
             (el[i].style.display = "none")
             console.log("[GEB] Block image from : "+(el[i].src))
         }
@@ -293,6 +293,7 @@ if (domIndex > 0){
             HideIdWi("rn_ad_native_t4745")
             HideClassWi("mn-related-container")
             ClickClassWi("vjs-big-play-button")
+            HideImg("asd.jpg")
             break;
         case "lk21online":
             HideId("tengah")
