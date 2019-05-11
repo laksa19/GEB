@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.87
+// @version      0.0.89
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -294,6 +294,7 @@ if (domIndex > 0){
             HideClassWi("mn-related-container")
             ClickClassWi("vjs-big-play-button")
             HideImg("asd.jpg")
+            HideIdWi("glx-12154-container")
             break;
         case "lk21online":
             HideId("tengah")
