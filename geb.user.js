@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.89
+// @version      0.0.91
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -280,7 +280,6 @@ if (domIndex > 0){
             HideClass("afs_ads")
             HideIdWi("tv-play")
             ClickId("button-lanjut")
-            ClickIdTo("ep-1",3)
             ClickClass("reklamgec")
             HideClassWi("ext-suggest-options")
             ClickClass("fa-tv")
@@ -295,6 +294,7 @@ if (domIndex > 0){
             ClickClassWi("vjs-big-play-button")
             HideImg("asd.jpg")
             HideIdWi("glx-12154-container")
+            HideClass("clear")
             break;
         case "lk21online":
             HideId("tengah")
