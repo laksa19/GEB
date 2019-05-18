@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.94
+// @version      0.0.97
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -16,7 +16,7 @@
 // get hostname
 var hostname = window.location.hostname;
 var domain = hostname.split(".")[0];
-if (domain == "www" || domain == "n"){
+if (domain == "www" || domain == "n" || domain == "www1"){
     domain = hostname.split(".")[1];
 }
 // hide by classname
