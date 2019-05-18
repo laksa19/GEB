@@ -16,7 +16,7 @@
 // get hostname
 var hostname = window.location.hostname;
 var domain = hostname.split(".")[0];
-if (domain == "www"){
+if (domain == "www" || domain == "n"){
     domain = hostname.split(".")[1];
 }
 // hide by classname
