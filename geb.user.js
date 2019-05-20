@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.0.97
+// @version      0.1.1
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -126,6 +126,32 @@ function HideTagIdWi(tag,tid,sid,t=10){
     },(t*1000))
 }
 
+// hide by tag name & id
+function HideTagIdS(tag,tid,idsplit,indx){
+    var i;
+    var el = document.getElementsByTagName(tag);
+
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            var getId = el[i].id;
+            var Id = getId.split(idsplit);
+            if(Id[indx] == tid){
+            el[i].style.display = "none";
+            console.log("[GEB] Block Element Tag Id : "+(el));
+            }
+        }
+    }
+}
+// hide by tag name & id with inteval
+function HideTagIdSWi(tag,tid,idsplit,indx,t=10){
+  var intervalId = setInterval(function(){
+      HideTagIdS(tag,tid,idsplit,indx)
+  }, 500);
+    setTimeout(function(){
+        clearInterval(intervalId)
+    },(t*1000))
+}
+
 // hide by tag name & class
 function HideTagStyle(tag,styleProp,stylePropValue){
     var i;
@@ -135,7 +161,7 @@ function HideTagStyle(tag,styleProp,stylePropValue){
             var style = getStyle(el[i], styleProp)
             if(style == stylePropValue){
             el[i].style.display = "none";
-            console.log("[GEB] Block Element Tag Id : "+(el));
+            console.log("[GEB] Block Element Tag Style : "+(el));
             }
         }
     }
@@ -295,6 +321,7 @@ if (domIndex > 0){
             HideImg("asd.jpg")
             HideIdWi("glx-12154-container")
             HideClass("clear")
+            HideTagIdSWi("div","ps","-",1)
             break;
         case "lk21online":
             HideId("tengah")
