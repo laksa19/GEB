@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.1
+// @version      0.1.2
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -279,6 +279,7 @@ function clickGEB() {
         HideClass("jwseed")
         HideClassWi("afs_ads")
         HideClassWi("logo-kanan")
+        HideClassWi("jw-logo")
     }
 }
 
@@ -309,6 +310,7 @@ if (domIndex > 0){
             ClickClass("reklamgec")
             HideClassWi("ext-suggest-options")
             ClickClass("fa-tv")
+            HideClassWi("jw-logo")
             break;
         case "anoboy":
             HideClass("home_baner")
