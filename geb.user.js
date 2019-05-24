@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.3
+// @version      0.1.4
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -330,6 +330,7 @@ if (domIndex > 0){
             HideIdWi("glx-12154-container")
             HideClass("clear")
             HideTagIdSWi("div","ps","-",1)
+            HideClassWi("bvr-widget")
             break;
         case "lk21online":
             HideId("tengah")
@@ -453,5 +454,6 @@ document.body.addEventListener("click", clickGEB)
 
 }
 ClickId("button-lanjut")
+ClickClass("button-lanjut")
 
 })();
