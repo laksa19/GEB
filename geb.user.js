@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.5
+// @version      0.1.6
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -329,7 +329,7 @@ if (domIndex > 0){
             ClickClassWi("vjs-big-play-button")
             HideImg("asd.jpg")
             HideIdWi("glx-12154-container")
-            HideClass("clear")
+            //HideClass("clear")
             HideTagIdSWi("div","ps","-",1)
             HideClassWi("bvr-widget")
             break;
