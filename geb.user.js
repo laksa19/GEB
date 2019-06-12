@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.7
+// @version      0.1.8
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -236,6 +236,20 @@ function getStyle(el, styleProp) {
   }
 }
 
+function PlayMovieXXI(){
+    var uri = document.URL;
+    var getpath = uri.split("/")[3]
+    var i;
+    var el = document.getElementsByTagName("a")
+    if(el){
+        for (i = 0; i < (el.length); i++) {
+            if(getpath == "movie" && el[i].href == uri+"/play"){
+                el[i].click();
+            }
+        }
+    }
+}
+
 // domain list
 var domArray = ["",
                 "grandxxi",
@@ -318,6 +332,7 @@ if (domIndex > 0){
             HideClassWi("ext-suggest-options")
             ClickClass("fa-tv")
             HideClassWi("jw-logo")
+            PlayMovieXXI()
             break;
         case "anoboy":
             HideClass("home_baner")
