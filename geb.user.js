@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.8
+// @version      0.1.9
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -384,6 +384,10 @@ if (domIndex > 0){
             HideIdWi("popup-banner")
             HideIdWi("ptbanner")
             HideIdWi("middle-banner")
+            HideTagIdSWi("div","fade","-",2)
+            HideIdWi("lk8op",30)
+            HideTagStyleWi("iframe","display","block")
+            ClickId("mv-ply-btn")
             break;
         case "oploverz":
             HideClassWi("headads")
