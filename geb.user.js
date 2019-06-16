@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.14
+// @version      0.1.15
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -243,7 +243,9 @@ function PlayMovieXXI(){
     var el = document.getElementsByTagName("a")
     if(el){
         for (i = 0; i < (el.length); i++) {
-            if(getpath == "movie" && el[i].href == uri+"/play"){
+            var getplay = el[i].href.split("/")[5]
+            if(getpath == "movie" && el[i].href == uri+"/"+getplay
+              || getpath == "film-seri" && el[i].href == uri+"/"+getplay){
                 el[i].click();
             }
         }
