@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.13
+// @version      0.1.14
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -288,6 +288,7 @@ var domArray = ["",
                 "layarcinema",
                 "zippyshare",
                 "goldmovie21",
+                "otakuindo",
 
              ];
 
@@ -461,6 +462,9 @@ if (domIndex > 0){
             break;
         case "bioskopkeren":
             ClickClass("reklamgec")
+            break;
+        case "otakuindo":
+            HideClass("box_banner")
             break;
 
     }
