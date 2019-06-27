@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.16
+// @version      0.1.17
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -292,6 +292,7 @@ var domArray = ["",
                 "goldmovie21",
                 "otakuindo",
                 "meownime",
+                "nontonanime",
 
              ];
 
@@ -468,6 +469,9 @@ if (domIndex > 0){
             break;
         case "otakuindo":
             HideClass("box_banner")
+            break;
+        case "nontonanime":
+            HideImg("banner500x60.jpg")
             break;
 
     }
