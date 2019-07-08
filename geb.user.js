@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.17
+// @version      0.1.18
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -293,6 +293,8 @@ var domArray = ["",
                 "otakuindo",
                 "meownime",
                 "nontonanime",
+                "indoxx1",
+                "indoxxi",
 
              ];
 
@@ -317,6 +319,30 @@ if (domIndex > 0){
 // elements
     switch (domain){
         case "indoxxi":
+            HideId("home-bnner-content")
+            HideId("home-bnner2-content")
+            HideId("player-side-left")
+            HideId("player-side-right")
+            HideIdWi("p_native")
+            HideIdWi("pc-player-bar-close")
+            HideTagIdWi("div","overlay")
+            HideClassWi("jwseed",30)
+            HideClass("trailerz")
+            HideIdWi("tutor")
+            ClickClass("mvi-cover")
+            ClickIdTo("server-list-close")
+            HideId("promoapk")
+            HideClass("chatango-btn")
+            HideClass("afs_ads")
+            HideIdWi("tv-play")
+            ClickId("button-lanjut")
+            ClickClass("reklamgec")
+            HideClassWi("ext-suggest-options")
+            ClickClass("fa-tv")
+            HideClassWi("jw-logo")
+            PlayMovieXXI()
+            break;
+        case "indoxx1":
             HideId("home-bnner-content")
             HideId("home-bnner2-content")
             HideId("player-side-left")
@@ -463,6 +489,7 @@ if (domIndex > 0){
             break;
         case "nanime":
             ClickIdTo("player",0)
+            //HideClass("pengunguman")
             break;
         case "bioskopkeren":
             ClickClass("reklamgec")
