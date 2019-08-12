@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.18
+// @version      0.1.19
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -295,6 +295,8 @@ var domArray = ["",
                 "nontonanime",
                 "indoxx1",
                 "indoxxi",
+                "nontontvonline",
+                "playtube",
 
              ];
 
@@ -499,6 +501,10 @@ if (domIndex > 0){
             break;
         case "nontonanime":
             HideImg("banner500x60.jpg")
+            break;
+        case "playtube":
+            HideClass("videoPlayerAd")
+            HideTagIdSWi("div","Market","Gid",0)
             break;
 
     }
