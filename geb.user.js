@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.19
+// @version      0.1.20
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -252,6 +252,10 @@ function PlayMovieXXI(){
     }
 }
 
+function setLS(k,v){
+    localStorage.setItem(k,v);
+}
+
 // domain list
 var domArray = ["",
                 "grandxxi",
@@ -343,6 +347,14 @@ if (domIndex > 0){
             ClickClass("fa-tv")
             HideClassWi("jw-logo")
             PlayMovieXXI()
+            HideTagIdSWi("div","p","_",0)
+            HideIdWi("p_root_2571817")
+            HideIdWi("SC_TBlock_671759")
+            HideIdWi("SC_TBlock_671758")
+            HideIdWi("mg-player-side")
+            setLS("coly", "1")
+            setLS("bm", "1566552011")
+            HideId("notif")
             break;
         case "indoxx1":
             HideId("home-bnner-content")
@@ -367,6 +379,15 @@ if (domIndex > 0){
             ClickClass("fa-tv")
             HideClassWi("jw-logo")
             PlayMovieXXI()
+            HideTagIdSWi("div","p","_",0)
+            HideIdWi("p_root_2571817")
+            HideIdWi("SC_TBlock_671759")
+            HideIdWi("SC_TBlock_671758")
+            HideIdWi("mg-player-side")
+            HideClassWi("overlay")
+            setLS("coly", "1")
+            setLS("bm", "1566552011")
+            HideId("notif")
             break;
         case "anoboy":
             HideClass("home_baner")
@@ -515,7 +536,6 @@ var meta = document.createElement('meta');
 meta.name = "theme-color";
 meta.content = "#3a4149";
 document.getElementsByTagName('head')[0].appendChild(meta);
-localStorage.setItem("coly", "1");
 
 document.body.addEventListener("click", clickGEB)
 
