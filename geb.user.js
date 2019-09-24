@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.20
+// @version      0.1.25
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -301,6 +301,7 @@ var domArray = ["",
                 "indoxxi",
                 "nontontvonline",
                 "playtube",
+                "ngantukberat",
 
              ];
 
@@ -389,6 +390,40 @@ if (domIndex > 0){
             setLS("bm", "1566552011")
             HideId("notif")
             break;
+        case "idxx1":
+            HideId("home-bnner-content")
+            HideId("home-bnner2-content")
+            HideId("player-side-left")
+            HideId("player-side-right")
+            HideIdWi("p_native")
+            HideIdWi("pc-player-bar-close")
+            HideTagIdWi("div","overlay")
+            HideClassWi("jwseed",30)
+            HideClass("trailerz")
+            HideIdWi("tutor")
+            ClickClass("mvi-cover")
+            ClickIdTo("server-list-close")
+            HideId("promoapk")
+            HideClass("chatango-btn")
+            HideClass("afs_ads")
+            HideIdWi("tv-play")
+            ClickId("button-lanjut")
+            ClickClass("reklamgec")
+            HideClassWi("ext-suggest-options")
+            ClickClass("fa-tv")
+            HideClassWi("jw-logo")
+            PlayMovieXXI()
+            HideTagIdSWi("div","p","_",0)
+            HideIdWi("p_root_2571817")
+            HideIdWi("SC_TBlock_671759")
+            HideIdWi("SC_TBlock_671758")
+            HideIdWi("mg-player-side")
+            HideClassWi("overlay")
+            setLS("coly", "1")
+            setLS("bm", "1566552011")
+            HideId("notif")
+            break;
+            
         case "anoboy":
             HideClass("home_baner")
             HideId("judi")
@@ -526,6 +561,9 @@ if (domIndex > 0){
         case "playtube":
             HideClass("videoPlayerAd")
             HideTagIdSWi("div","Market","Gid",0)
+            break;
+        case "ngantukberat":
+            ClickClassWi("btn");
             break;
 
     }
