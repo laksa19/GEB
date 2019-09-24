@@ -4,7 +4,7 @@
 // @updateURL    https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @downloadURL  https://raw.githubusercontent.com/laksa19/GEB/master/geb.user.js
 // @iconURL      https://raw.githubusercontent.com/laksa19/GEB/master/geb-icon.png
-// @version      0.1.25
+// @version      0.1.27
 // @author       Laksamadi Guko
 // @description  Hide Elements and Gif images
 // @match        *://*/*
@@ -302,6 +302,7 @@ var domArray = ["",
                 "nontontvonline",
                 "playtube",
                 "ngantukberat",
+                "idxx1",
 
              ];
 
@@ -423,7 +424,7 @@ if (domIndex > 0){
             setLS("bm", "1566552011")
             HideId("notif")
             break;
-            
+
         case "anoboy":
             HideClass("home_baner")
             HideId("judi")
